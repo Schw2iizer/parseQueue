@@ -1,10 +1,22 @@
 <DOCTYPE html>
-<html>
+<html ng-app="parseQ">
 <head>
+<link rel="stylesheet" href="main.css"/>
 	<title>ParseQ</title>
 </head>
-<body>
+<body ng-controller="mainController">
+
+<input ng-model="questions"> <button ng-click="postData()"> Submit </button>
+
+<div ng-repeat="item in list">
+<p ng-click="changeColor()" style="color: {{item.status}}">{{item.question}}</p>
+</div>
+
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/defaultHeaders.js"></script>
+<script src="controllers/mainController.js"></script>
+<script src="services/parseService.js"></script>
 </body>
 </html>
