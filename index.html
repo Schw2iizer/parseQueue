@@ -6,7 +6,9 @@
 </head>
 <body ng-controller="mainController">
 
-<input ng-model="questions"> <button ng-click="postData()"> Submit </button>
+<input ng-model="questions"> <button ng-click="postData()"> Click Me </button>
+
+<hr></hr>
 
 <div ng-repeat="item in list">
 <p ng-click="changeColor()" style="color: {{item.status}}">{{item.question}}</p>
